@@ -44,7 +44,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+          Luiz's Portfolio
         </Link>
 
         <div className="block md:hidden mobile-menu">

@@ -9,22 +9,14 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul>
-        <li>NodeJS</li>
-        <li>Express</li>
-        <li>React</li>
-        <li>NextJS</li>
-        <li>PostgreSQL</li>
-        <li>MongoDB</li>
-        <li>Git</li>
-      </ul>
+      <p> NodeJS / Express / React / NextJS/ PostgreSQL / MongoDB / Git </p>
     ),
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>
           Computer and Information Engineering, Universidade Federal do Rio de
           Janeiro (2019 - current)
@@ -40,7 +32,7 @@ const TAB_DATA = [
     title: "Experience",
     id: "experience",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>Realms Web3 Community, Junior Programmer (Jan. 2024 - current)</li>
         <li>Realms Web3 Community, Intern (Jun. 2022 - Dec. 2023)</li>
         <li>Escola ORT, IT teacher (Aug. 2023 - current)</li>
@@ -57,7 +49,7 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>TOELF iBT - Score: 102 (Jan 2024 - Jan 2026)</li>
         <li>
           MERN Stack Bootcamp 2023 - MongoDB, Express, Reacy & NodeJS (Jul 2023)
@@ -92,10 +84,10 @@ const AboutSection = () => {
   return (
     <section>
       <div className="text-white">
-        <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <div className="md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <Image src="/images/about_image.png" width={500} height={500} />
 
-          <div>
+          <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
             <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
 
             <p className="text-base lg:text-lg">
@@ -109,40 +101,42 @@ const AboutSection = () => {
               with version control systems like Git, ensuring efficient code
               management and seamless collaboration within development teams.
             </p>
+          </div>
+        </div>
+        <div className="px-4">
+          <div className="flex flex-row w-full mt-8 justify-between">
+            <TabButton
+              selectTab={() => handleTabChange("skills")}
+              active={tab === "skills"}
+            >
+              {" "}
+              Skills{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("education")}
+              active={tab === "education"}
+            >
+              {" "}
+              Education{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("experience")}
+              active={tab === "experience"}
+            >
+              {" "}
+              Experience{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("certifications")}
+              active={tab === "certifications"}
+            >
+              {" "}
+              Certifications{" "}
+            </TabButton>
+          </div>
 
-            <div className="flex flex-row mt-8">
-              <TabButton
-                selectTab={() => handleTabChange("skills")}
-                active={tab === "skills"}
-              >
-                {" "}
-                Skills{" "}
-              </TabButton>
-              <TabButton
-                selectTab={() => handleTabChange("education")}
-                active={tab === "education"}
-              >
-                {" "}
-                Education{" "}
-              </TabButton>
-              <TabButton
-                selectTab={() => handleTabChange("experience")}
-                active={tab === "experience"}
-              >
-                {" "}
-                Experience{" "}
-              </TabButton>
-              <TabButton
-                selectTab={() => handleTabChange("certifications")}
-                active={tab === "certifications"}
-              >
-                {" "}
-                Certifications{" "}
-              </TabButton>
-            </div>
-            <div className="mt-8">
-              {TAB_DATA.find((t) => t.id === tab).content}
-            </div>
+          <div className="mt-8 mb-8 flex justify-center">
+            {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
       </div>
