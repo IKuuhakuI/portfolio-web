@@ -8,14 +8,12 @@ export default function Home() {
         flex 
         min-h-screen  
         flex-col
-        bg-[#121212]
-        container
-        mx-auto
-        px-12
-        py-4
+        bg-[#121212]        
       "
     >
-      <HeroSection />
+      <div className="container mx-auto px-12 py-4">
+        <HeroSection />
+      </div>
     </main>
   );
 }

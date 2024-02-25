@@ -5,19 +5,24 @@ const HeroSection = () => {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-12">
-        <div className="col-span-7 place-self-center">
+        <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1
             className="
-          text-white 
-          mb-4 
-          text-4xl
-          lg:text-6xl 
-          font-extrabold
-        "
+              text-white 
+              mb-4 
+              text-4xl
+              sm:text-5xl
+              lg:text-6xl 
+              font-extrabold
+            "
           >
-            Hello, I'm Luiz
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-900">
+              Hello, I'm{" "}
+            </span>
+            Luiz
           </h1>
-          <p className="text-[#ADB7BE] text-lg lg:text-xl">
+
+          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at
             suscipit ligula. Ut ligula est, aliquam a fermentum ac, pharetra vel
             est. Nam sed viverra ipsum. In tempus porta diam ac faucibus.
@@ -27,11 +32,16 @@ const HeroSection = () => {
               className="
                 px-6 
                 py-3 
+                w-full
+                sm:w-fit
                 rounded-full 
                 mr-4 
-                bg-white 
-                hover:bg-slate-300 
-                text-black
+                bg-gradient-to-br
+                from-blue-400
+                via-blue-900
+                to-purple-900
+                hover:bg-slate-200 
+                text-white
               "
             >
               Hire Me
@@ -40,6 +50,8 @@ const HeroSection = () => {
               className="
                 px-6 
                 py-3 
+                w-full
+                sm:w-fit
                 rounded-full 
                 bg-transparent 
                 hover:bg-slate-800 
