@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectTag from "./ProjectTag";
 
 const projectsData = [
   {
@@ -86,6 +88,12 @@ const projectsData = [
 ];
 
 const ProjectsSections = () => {
+  const [tag, setTag] = useState("All");
+
+  const handleTagChange = (newTag) => {
+    setTag(newTag);
+  };
+
   return (
     <>
       <h2
@@ -103,131 +111,16 @@ const ProjectsSections = () => {
       </h2>
 
       <div className="text-white flex flex-row justify-center items-center gap-2 pb-6">
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-purple-500 
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          All
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          Backend
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          Frontend
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          Games
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          JS
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          TypeScript
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          Python
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          GO
-        </button>
-        <button
-          className="
-            rounded-full 
-            border-2 
-            border-slate-600
-            hover:border-white
-            px-6 
-            py-3
-            text-xl 
-            cursor-pointer
-          "
-        >
-          C#
-        </button>
+        <ProjectTag
+          onClick={handleTagChange}
+          name="All"
+          isSelected={tag === "All"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Backend"
+          isSelected={tag === "Backend"}
+        />
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 md:gap-12-">
