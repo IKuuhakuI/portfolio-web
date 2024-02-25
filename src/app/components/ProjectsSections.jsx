@@ -85,7 +85,7 @@ const projectsData = [
   },
 ];
 
-const ProjectSections = () => {
+const ProjectsSections = () => {
   return (
     <>
       <h2
@@ -118,4 +118,4 @@ const ProjectSections = () => {
   );
 };
 
-export default ProjectSections;
+export default ProjectsSections;
