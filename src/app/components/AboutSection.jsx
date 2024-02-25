@@ -4,6 +4,81 @@ import Image from "next/image";
 
 import TabButton from "./TabButton";
 
+const TAB_DATA = [
+  {
+    title: "Skills",
+    id: "skills",
+    content: (
+      <ul>
+        <li>NodeJS</li>
+        <li>Express</li>
+        <li>React</li>
+        <li>NextJS</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>Git</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul>
+        <li>
+          Computer and Information Engineering, Universidade Federal do Rio de
+          Janeiro (2019 - current)
+        </li>
+        <li>Game Development, Estacio (2023 - current)</li>
+        <li>Programming/IT, ORT Institute of Technology (2016 - 2018)</li>
+        <li>PUC for a semester - Introduction to Math, PUC Rio (2017)</li>
+        <li>PUC for a semester - Computer Science, PUC Rio (2016)</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Experience",
+    id: "experience",
+    content: (
+      <ul>
+        <li>Realms Web3 Community, Junior Programmer (Jan. 2024 - current)</li>
+        <li>Realms Web3 Community, Intern (Jun. 2022 - Dec. 2023)</li>
+        <li>Escola ORT, IT teacher (Aug. 2023 - current)</li>
+        <li>Scientific Initiation Student, DiscoveRx (Dec. 2023 - current)</li>
+        <li>
+          Scientific Initiation Student, GTA - Grupo de Teleinformática e
+          Automação (Sep. 2020 - Jun. 2022)
+        </li>
+        <li>Microlins, Intern (Dec. 2017 - Jan. 2018)</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul>
+        <li>TOELF iBT - Score: 102 (Jan 2024 - Jan 2026)</li>
+        <li>
+          MERN Stack Bootcamp 2023 - MongoDB, Express, Reacy & NodeJS (Jul 2023)
+        </li>
+        <li>
+          Unity parte 1: criação de um jogo de sobrevivência à zumbis para Web
+          (Mar 2023)
+        </li>
+        <li>Japanese Kanji Proficiency Test level 10 (Dec 2022)</li>
+        <li>
+          Certificado de Participação - 11ª Semana de Integração Acadêmica da
+          UFRJ (Feb 2022)
+        </li>
+        <li>Cambridge English: Advanced (CAE) - CEFR level C1 (Jan 2019)</li>
+        <li>World ORT STEM Communication Awards 2018 (Dec 2018)</li>
+        <li>Doulingo English Test (Jul 2021 - Jul 2023)</li>
+      </ul>
+    ),
+  },
+];
+
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
@@ -64,6 +139,9 @@ const AboutSection = () => {
                 {" "}
                 Certifications{" "}
               </TabButton>
+            </div>
+            <div className="mt-8">
+              {TAB_DATA.find((t) => t.id === tab).content}
             </div>
           </div>
         </div>
