@@ -9,7 +9,7 @@ const projectsData = [
     title: "Infinity Worldle",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/infinity_worldle.png",
-    tag: ["All", "Games", "JS"],
+    tag: ["All", "Games"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -18,7 +18,7 @@ const projectsData = [
     title: "Fullstack Go Web",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/fullstack_go.png",
-    tag: ["All", "Frontend", "Backend", "JS", "GO"],
+    tag: ["All", "Frontend", "Backend"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -27,7 +27,7 @@ const projectsData = [
     title: "StockWise",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/stockwise.jpeg",
-    tag: ["All", "Frontend", "Backend", "TypeScript"],
+    tag: ["All", "Frontend", "Backend"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -36,7 +36,7 @@ const projectsData = [
     title: "ZiulFlix",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/ziul_flix.jpeg",
-    tag: ["All", "Frontend", "Backend", "JS"],
+    tag: ["All", "Frontend", "Backend"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -45,7 +45,7 @@ const projectsData = [
     title: "Python Web Scraping",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/web-scraping-with-python.png",
-    tag: ["All", "Python"],
+    tag: ["All", "Backend"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -54,7 +54,7 @@ const projectsData = [
     title: "All Heroes Must Die",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/all_heroes_must_die.png",
-    tag: ["All", "Games", "C#"],
+    tag: ["All", "Games"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -63,7 +63,7 @@ const projectsData = [
     title: "Portfolio Web",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/portfolio.png",
-    tag: ["All", "Frontend", "JS"],
+    tag: ["All", "Frontend"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -72,7 +72,7 @@ const projectsData = [
     title: "Pong4Math",
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/pong_4_math.png",
-    tag: ["All", "Games", "JS"],
+    tag: ["All", "Games"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -124,6 +124,16 @@ const ProjectsSections = () => {
           onClick={handleTagChange}
           name="Backend"
           isSelected={tag === "Backend"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Frontend"
+          isSelected={tag === "Frontend"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Games"
+          isSelected={tag === "Games"}
         />
       </div>
 
