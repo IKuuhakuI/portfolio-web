@@ -53,7 +53,7 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>TOELF iBT - Score: 102 (Jan 2024 - Jan 2026)</li>
+        <li>TOEFL iBT - Score: 102 (Jan 2024 - Jan 2026)</li>
         <li>
           MERN Stack Bootcamp 2023 - MongoDB, Express, Reacy & NodeJS (Jul 2023)
         </li>
