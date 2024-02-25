@@ -8,6 +8,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/infinity_worldle.png",
     tag: ["All", "Games", "JS"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 2,
@@ -15,6 +17,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/fullstack_go.png",
     tag: ["All", "Frontend", "Backend", "JS", "GO"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 3,
@@ -22,6 +26,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/stockwise.jpeg",
     tag: ["All", "Frontend", "Backend", "TypeScript"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 4,
@@ -29,6 +35,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/ziul_flix.jpeg",
     tag: ["All", "Frontend", "Backend", "JS"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 5,
@@ -36,6 +44,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/web-scraping-with-python.png",
     tag: ["All", "Python"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 6,
@@ -43,6 +53,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/all_heroes_must_die.png",
     tag: ["All", "Games", "C#"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 7,
@@ -50,6 +62,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/portfolio.png",
     tag: ["All", "Frontend", "JS"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 8,
@@ -57,6 +71,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/pong_4_math.png",
     tag: ["All", "Games", "JS"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
   {
     id: 9,
@@ -64,6 +80,8 @@ const projectsData = [
     description: "[ADD DESCRIPTION]",
     image: "/images/projects/infinity_questions.png",
     tag: ["All", "Games", "Python"],
+    gitUrl: "/",
+    previewUrl: "/",
   },
 ];
 
@@ -78,6 +96,9 @@ const ProjectSections = () => {
             title={project.title}
             description={project.description}
             imgUrl={project.image}
+            tags={project.tag}
+            gitUrl={project.gitUrl}
+            previewUrl={project.gitUrl}
           />
         ))}
       </div>

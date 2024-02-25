@@ -2,7 +2,7 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <div>
       <div
@@ -29,7 +29,7 @@ const ProjectCard = ({ imgUrl, title, description }) => {
           "
         >
           <Link
-            href={"/"}
+            href={gitUrl}
             className="
               h-14 
               w-14 
@@ -60,7 +60,7 @@ const ProjectCard = ({ imgUrl, title, description }) => {
           </Link>
 
           <Link
-            href={"/"}
+            href={previewUrl}
             className="
               h-14 
               w-14 
