@@ -71,7 +71,16 @@ const ProjectSections = () => {
   return (
     <>
       <h2>MyProjects</h2>
-      <div></div>
+      <div>
+        {projectsData.map((project) => (
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            imgUrl={project.image}
+          />
+        ))}
+      </div>
     </>
   );
 };
