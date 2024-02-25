@@ -9,27 +9,27 @@ const AboutSection = () => {
           <Image src="/images/about_image.png" width={500} height={500} />
 
           <div>
-            <h2>About Me</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
 
-            <p>
+            <p className="text-base lg:text-lg">
               Hello! I'm Luiz Carlos Aguiar Carrion, a versatile developer with
-              a passion for creating engaging experiences. My expertise lies in
+              a passion for creating engaging experiences. My expertise spans
               backend, frontend, and game development, where I leverage a
-              diverse skill set to craft innovative solutions.
-              <br />
-              <b>Backend Development</b>: Proficient in Node.js, FastAPI, and
-              Python, with experience in Express.js, MongoDB, and PostgreSQL.
-              <br />
-              <b>Frontend Development:</b> Skilled in React, Next.js, and
-              JavaScript, focusing on responsive and intuitive user interfaces.
-              <br />
-              <b>Game Development:</b> Experienced with Unity, specializing in
-              captivating gameplay mechanics and immersive worlds.
-              <br />
-              <b>Technologies</b>: Proficient in TypeScript, JavaScript, and
-              Python, adept at building RESTful APIs, implementing real-time
-              features, and developing complex algorithms.
+              diverse skill set to craft innovative solutions. With strong soft
+              skills in communication, collaboration, and problem-solving, I
+              thrive in dynamic environments and excel at delivering
+              high-quality results. Additionally, I have extensive experience
+              with version control systems like Git, ensuring efficient code
+              management and seamless collaboration within development teams.
             </p>
+
+            <div className="flex flex-row mt-8">
+              <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-blue-500">
+                Skills
+              </span>
+              <span>Education</span>
+              <span>Experience</span>
+            </div>
           </div>
         </div>
       </div>
