@@ -31,6 +31,7 @@ const HeroSection = () => {
             <button
               className="
                 px-6 
+                inline-block
                 py-3 
                 w-full
                 sm:w-fit
@@ -48,17 +49,24 @@ const HeroSection = () => {
             </button>
             <button
               className="
-                px-6 
-                py-3 
+                px-1 
+                inline-block
+                py-1
                 w-full
                 sm:w-fit
                 rounded-full 
-                bg-transparent 
+                bg-gradient-to-br
+                from-blue-400
+                via-blue-900
+                to-purple-900
                 hover:bg-slate-800 
-                text-white border 
-                border-white mt-3"
+                text-white
+                mt-3
+              "
             >
-              Download CV
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                Download CV
+              </span>
             </button>
           </div>
         </div>
