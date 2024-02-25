@@ -103,8 +103,8 @@ const HeroSection = () => {
             className="
               rounded-full 
               bg-[#181818] 
-              w-[250px] 
-              h-[250px] 
+              w-[200px] 
+              h-[200px] 
               lg:w-[400px] 
               lg:h-[400px] 
               relative
