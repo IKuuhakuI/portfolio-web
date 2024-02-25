@@ -1,7 +1,19 @@
-import React from "react";
+"use client";
+import React, { useTransition, useState } from "react";
 import Image from "next/image";
 
+import TabButton from "./TabButton";
+
 const AboutSection = () => {
+  const [tab, setTab] = useState("skills");
+  const [isPending, startTransition] = useTransition();
+
+  const handleTabChange = (id) => {
+    startTransition(() => {
+      setTab(id);
+    });
+  };
+
   return (
     <section>
       <div className="text-white">
@@ -24,11 +36,34 @@ const AboutSection = () => {
             </p>
 
             <div className="flex flex-row mt-8">
-              <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-blue-500">
-                Skills
-              </span>
-              <span>Education</span>
-              <span>Experience</span>
+              <TabButton
+                selectTab={() => handleTabChange("skills")}
+                active={tab === "skills"}
+              >
+                {" "}
+                Skills{" "}
+              </TabButton>
+              <TabButton
+                selectTab={() => handleTabChange("education")}
+                active={tab === "education"}
+              >
+                {" "}
+                Education{" "}
+              </TabButton>
+              <TabButton
+                selectTab={() => handleTabChange("experience")}
+                active={tab === "experience"}
+              >
+                {" "}
+                Experience{" "}
+              </TabButton>
+              <TabButton
+                selectTab={() => handleTabChange("certifications")}
+                active={tab === "certifications"}
+              >
+                {" "}
+                Certifications{" "}
+              </TabButton>
             </div>
           </div>
         </div>
