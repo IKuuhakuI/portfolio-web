@@ -34,7 +34,10 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Realms Web3 Community, Junior Programmer (Jan. 2024 - current)</li>
-        <li>Realms Web3 Community, Intern (Jun. 2022 - Dec. 2023)</li>
+        <li>
+          Realms Web3 Community, Intern - GameDev and BackendDev (Jun. 2022 -
+          Dec. 2023)
+        </li>
         <li>Escola ORT, IT teacher (Aug. 2023 - current)</li>
         <li>Scientific Initiation Student, DiscoveRx (Dec. 2023 - current)</li>
         <li>
