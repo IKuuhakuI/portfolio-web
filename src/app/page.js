@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         bg-[#121212]        
       "
     >
+      <Navbar />
       <div className="container mx-auto px-12 py-4">
         <HeroSection />
       </div>
